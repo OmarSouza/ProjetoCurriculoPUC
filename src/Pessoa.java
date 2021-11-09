@@ -14,7 +14,16 @@ public class Pessoa {
     private String formacaoComplementar_Pessoa; //Cursos fora do Academico
     private String idioma_Pessoa;
     private String infoComplementar_Pessoa;
-
+    
+    private static Pessoa instance = null;
+    
+    public static Pessoa getInstance(){
+        if(instance == null)
+            instance = new Pessoa();
+        
+        return instance;
+    }
+    
     public Pessoa(String nome_Pessoa, String email_Pessoa, String telefone_Pessoa, String endereço_Pessoa, int idade_Pessoa, String estadoCivil_Pessoa, String objetivo_Pessoa, String formacaoAcademica_Pessoa, String experiencia_Pessoa, String formacaoComplementar_Pessoa, String idioma_Pessoa, String infoComplementar_Pessoa) {
         this.nome_Pessoa = nome_Pessoa;
         this.email_Pessoa = email_Pessoa;
