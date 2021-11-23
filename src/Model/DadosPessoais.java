@@ -1,15 +1,13 @@
 package Model;
 
-import java.util.Date;
-
 public class DadosPessoais {
     private String nomeUsuario;
     private String emailUsuario;
     private String telefoneUsuario;
     private String enderecoUsuario;
-    private Date dataNascimentoUsuario;
+    private String dataNascimentoUsuario;
 
-    public DadosPessoais(String nomeUsuario, String emailUsuario, String telefoneUsuario, String enderecoUsuario, Date dataNascimentoUsuario) {
+    public DadosPessoais(String nomeUsuario, String emailUsuario, String telefoneUsuario, String enderecoUsuario, String dataNascimentoUsuario) {
         this.nomeUsuario = nomeUsuario;
         this.emailUsuario = emailUsuario;
         this.telefoneUsuario = telefoneUsuario;
@@ -52,11 +50,11 @@ public class DadosPessoais {
         this.enderecoUsuario = enderecoUsuario;
     }
 
-    public Date getDataNascimentoUsuario() {
+    public String getDataNascimentoUsuario() {
         return dataNascimentoUsuario;
     }
 
-    public void setDataNascimentoUsuario(Date dataNascimentoUsuario) {
+    public void setDataNascimentoUsuario(String dataNascimentoUsuario) {
         this.dataNascimentoUsuario = dataNascimentoUsuario;
     }
     

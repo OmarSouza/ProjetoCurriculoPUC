@@ -6,9 +6,9 @@ import Model.FormacaoAcademica;
 import Model.Idioma;
 
 public class DadosCurriculo {
-    public DadosPessoais dadosPessoais;
+    public DadosPessoais dadosPessoais = new DadosPessoais();
     private String objetivo;
-    public FormacaoAcademica forAca;
+    public FormacaoAcademica forAca = new FormacaoAcademica();
     public CursoComplementar cursoComp;
     public ExperienciaProfissional expProf;
     public Idioma idioma;
