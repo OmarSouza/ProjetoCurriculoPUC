@@ -29,7 +29,7 @@ public class DadosCurriculo {
     
     public void imprimirDados(){
         System.out.println("Nome: " + dadosPes.getNomeUsuario() + "\nE-mail: " + dadosPes.getEmailUsuario()
-                + "\n Endereço: " + dadosPes.getEnderecoUsuario() + "\nData de Nascimento: "
+                + "\nEndereço: " + dadosPes.getEnderecoUsuario() + "\nData de Nascimento: "
                 + dadosPes.getDataNascimentoUsuario() + "\nTelefone: " + dadosPes.getTelefoneUsuario() + "\n");
         
         System.out.println("Objetivo: " + objetivo + "\n");
@@ -37,12 +37,15 @@ public class DadosCurriculo {
         System.out.println("Formação Acadêmica:\nCurso: " + forAca.getCursoFormacaoAcademica() + "\nPeríodo: "
                 + forAca.getPeriodoFormacaoAcademica() + "\nInstituição: " + forAca.getInstituicaoFormacaoAcademica() + "\n");
         
+        if (cursoComp.isFezCursoCursoComplementar() == true)
         System.out.println("Cursos Complementares:\nCurso: " + cursoComp.getCursoCursoComplementar() + "\nPeríodo: "
                 + cursoComp.getDuracaoCursoComplementar() + "\nInstituição: " + cursoComp.getInstituicaoCursoComplementar() + "\n");
         
+        if (expProf.isPrimeiroEmpregoExperienciaProfissional() == false)
         System.out.println("Experiência Profissional:\nCargo: " + expProf.getFuncaoEmpresaExperienciaProfissional()
                 + "\nEmpresa: " + expProf.getEmpresaExperienciaProfissional() + "\nPeríodo: " + expProf.getPeriodoExperienciaProfissional() + "\n");
         
+        if (idioma.isPossuiIdiomaIdioma() == true)
         System.out.println("Idioma:\nLinguagem:" + idioma.getIdiomaIdioma() + "\nProficiência:" + idioma.getNivelIdioma() + "\n");
         
         System.out.println("Informações Adicionais: " + infoAdicional + "\n");

@@ -4,6 +4,7 @@ public class CursoComplementar {
     private String cursoCursoComplementar;
     private String duracaoCursoComplementar;
     private String instituicaoCursoComplementar;
+    private boolean fezCursoCursoComplementar;
 
     public String getCursoCursoComplementar() {
         return cursoCursoComplementar;
@@ -27,6 +28,16 @@ public class CursoComplementar {
 
     public void setInstituicaoCursoComplementar(String instituicaoCursoComplementar) {
         this.instituicaoCursoComplementar = instituicaoCursoComplementar;
-    }   
+    }
+
+    public boolean isFezCursoCursoComplementar() {
+        return fezCursoCursoComplementar;
+    }
+
+    public void setFezCursoCursoComplementar(boolean fezCursoCursoComplementar) {
+        this.fezCursoCursoComplementar = fezCursoCursoComplementar;
+    }
+    
+    
     
 }

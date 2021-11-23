@@ -58,9 +58,9 @@ public class MontagemCurriculo {
 
         System.out.println("Você fez curso complementar?\nS - Sim;\nN = Não.");
         char charCurso = scan.nextLine().charAt(0);
-        boolean boolCurso = verificarInfos(charCurso);
+        dadosCur.cursoComp.setFezCursoCursoComplementar(verificarInfos(charCurso));
 
-        if (boolCurso == true) {
+        if (dadosCur.cursoComp.isFezCursoCursoComplementar() == true) {
             System.out.println("\n===== Curso Complementar =====\n\n");
 
             System.out.println("Qual era o curso?");
@@ -77,9 +77,9 @@ public class MontagemCurriculo {
 
         System.out.println("É o seu primeiro emprego?\nS - Sim;\nN = Não.");
         char charEmprego = scan.nextLine().charAt(0);
-        boolean boolEmprego = verificarInfos(charEmprego);
+        dadosCur.expProf.setPrimeiroEmpregoExperienciaProfissional(verificarInfos(charEmprego));
 
-        if (boolEmprego == false) {
+        if (dadosCur.expProf.isPrimeiroEmpregoExperienciaProfissional() == false) {
             System.out.println("\n===== Experiência Profissional =====\n\n");
 
             System.out.println("Qual era o cargo?");
@@ -96,9 +96,9 @@ public class MontagemCurriculo {
 
         System.out.println("Você tem conhecimento em algum idioma?\nS - Sim;\nN = Não.");
         char charIdioma = scan.nextLine().charAt(0);
-        boolean boolIdioma = verificarInfos(charIdioma);
+        dadosCur.idioma.setPossuiIdiomaIdioma(verificarInfos(charIdioma));
 
-        if (boolIdioma == true) {
+        if (dadosCur.idioma.isPossuiIdiomaIdioma() == true) {
             System.out.println("Nome do Idioma:");
             dadosCur.idioma.setIdiomaIdioma(scan.nextLine());
 
@@ -109,7 +109,7 @@ public class MontagemCurriculo {
         System.out.println("Deseja inserir alguma informação adicional (Aperte enter caso não deseje)?");
         dadosCur.setInfoAdicional(scan.nextLine());
 
-        System.out.println("Salvando Experiência Profissional...\n");
+        System.out.println("Salvando Informações...\n");
 
         System.out.println("=== CURRÍCULO CRIADO ===\n");
         System.out.println("Por favor, verifique as informações: \n");
@@ -120,7 +120,7 @@ public class MontagemCurriculo {
     public boolean verificarInfos(char fezCurso) {
         boolean boolVerifica;
 
-        if (fezCurso == 'S') {
+        if (fezCurso == 's') {
             boolVerifica = true;
         } else {
             boolVerifica = false;

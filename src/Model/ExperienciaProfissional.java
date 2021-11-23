@@ -4,6 +4,7 @@ public class ExperienciaProfissional {
     private String empresaExperienciaProfissional;
     private String periodoExperienciaProfissional;
     private String funcaoEmpresaExperienciaProfissional;
+    private boolean primeiroEmpregoExperienciaProfissional;
 
     public ExperienciaProfissional(String empresaExperienciaProfissional, String periodoExperienciaProfissional, String funcaoEmpresaExperienciaProfissional) {
         this.empresaExperienciaProfissional = empresaExperienciaProfissional;
@@ -37,6 +38,13 @@ public class ExperienciaProfissional {
     public void setFuncaoEmpresaExperienciaProfissional(String funcaoEmpresaExperienciaProfissional) {
         this.funcaoEmpresaExperienciaProfissional = funcaoEmpresaExperienciaProfissional;
     }
-    
+
+    public boolean isPrimeiroEmpregoExperienciaProfissional() {
+        return primeiroEmpregoExperienciaProfissional;
+    }
+
+    public void setPrimeiroEmpregoExperienciaProfissional(boolean primeiroEmpregoExperienciaProfissional) {
+        this.primeiroEmpregoExperienciaProfissional = primeiroEmpregoExperienciaProfissional;
+    }    
     
 }
