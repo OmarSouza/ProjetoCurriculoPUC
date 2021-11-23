@@ -142,11 +142,11 @@ public class MontagemCurriculo {
              
             Paragraph conteudo = new Paragraph();
             
-            conteudo.add(new Paragraph(dadosCur.dadosPessoais.getNomeUsuario(), fonteNomePessoa));
-            conteudo.add(new Paragraph(dadosCur.dadosPessoais.getEmailUsuario(), fontePadrão));
-            conteudo.add(new Paragraph(dadosCur.dadosPessoais.getEnderecoUsuario(), fontePadrão));
-            conteudo.add(new Paragraph(dadosCur.dadosPessoais.getTelefoneUsuario(), fontePadrão));
-            conteudo.add(new Paragraph(dadosCur.dadosPessoais.getDataNascimentoUsuario(), fontePadrão)); 
+            conteudo.add(new Paragraph(dadosCur.dadosPes.getNomeUsuario(), fonteNomePessoa));
+            conteudo.add(new Paragraph(dadosCur.dadosPes.getEmailUsuario(), fontePadrão));
+            conteudo.add(new Paragraph(dadosCur.dadosPes.getEnderecoUsuario(), fontePadrão));
+            conteudo.add(new Paragraph(dadosCur.dadosPes.getTelefoneUsuario(), fontePadrão));
+            conteudo.add(new Paragraph(dadosCur.dadosPes.getDataNascimentoUsuario(), fontePadrão)); 
             
             conteudo.add(new Paragraph("\n\n"));
             
