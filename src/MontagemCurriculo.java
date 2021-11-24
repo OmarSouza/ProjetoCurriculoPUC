@@ -112,7 +112,6 @@ public class MontagemCurriculo {
         System.out.println("Salvando Informações...\n");
 
         System.out.println("=== CURRÍCULO CRIADO ===\n");
-        System.out.println("Por favor, verifique as informações: \n");
 
         dadosCur.imprimirDados();
     }
@@ -120,7 +119,7 @@ public class MontagemCurriculo {
     public boolean verificarInfos(char fezCurso) {
         boolean boolVerifica;
 
-        if (fezCurso == 's') {
+        if (fezCurso == 's' || fezCurso == 'S') {
             boolVerifica = true;
         } else {
             boolVerifica = false;
@@ -159,14 +158,22 @@ public class MontagemCurriculo {
             conteudo.add(new Paragraph("FORMAÇÃO", fonteSubTitulo));
             conteudo.add(new Paragraph("\n"));
             conteudo.add(new Paragraph(dadosCur.forAca.getCursoFormacaoAcademica(), fontePadrão));
-            conteudo.add(new Paragraph(dadosCur.forAca.getInstituicaoFormacaoAcademica(), fontePadrão));
             conteudo.add(new Paragraph(dadosCur.forAca.getPeriodoFormacaoAcademica(), fontePadrão));
-            
+            conteudo.add(new Paragraph(dadosCur.forAca.getInstituicaoFormacaoAcademica(), fontePadrão));
+
             conteudo.add(new Paragraph("\n"));
             
-            conteudo.add(new Paragraph("EXPERIENCIA PROFISSIONAL", fonteSubTitulo));
-            conteudo.add(new Paragraph("\n"));
-            conteudo.add(new Paragraph("Sem Experiencia Profissional"));
+            if(dadosCur.expProf.isPrimeiroEmpregoExperienciaProfissional() == false){
+                conteudo.add(new Paragraph("EXPERIENCIA PROFISSIONAL", fonteSubTitulo));
+                conteudo.add(new Paragraph("\n"));
+                conteudo.add(new Paragraph(dadosCur.expProf.getFuncaoEmpresaExperienciaProfissional(), fontePadrão));
+                conteudo.add(new Paragraph(dadosCur.expProf.getPeriodoExperienciaProfissional(), fontePadrão));
+                conteudo.add(new Paragraph(dadosCur.expProf.getEmpresaExperienciaProfissional(), fontePadrão));
+            }else{
+                conteudo.add(new Paragraph("EXPERIENCIA PROFISSIONAL", fonteSubTitulo));
+                conteudo.add(new Paragraph("\n"));
+                conteudo.add(new Paragraph("Sem Experiencia Profissional"));
+            }      
             
             conteudo.add(new Paragraph("\n"));
             
@@ -174,11 +181,31 @@ public class MontagemCurriculo {
             conteudo.add(new Paragraph("\n"));
             conteudo.add(new Paragraph("Curso: Técnico em Informatica.\nDuração: 2017 - 2018 (1 ano e meio).\nPronatec Uberlandia."));
             
+            if(dadosCur.cursoComp.isFezCursoCursoComplementar() == false){
+                conteudo.add(new Paragraph("CURSO COMPLEMENTAR", fonteSubTitulo));
+                conteudo.add(new Paragraph("\n"));
+                conteudo.add(new Paragraph(dadosCur.cursoComp.getCursoCursoComplementar(), fontePadrão));
+                conteudo.add(new Paragraph(dadosCur.cursoComp.getDuracaoCursoComplementar(), fontePadrão));
+                conteudo.add(new Paragraph(dadosCur.cursoComp.getInstituicaoCursoComplementar(), fontePadrão));
+            }else{
+                conteudo.add(new Paragraph("CURSO COMPLEMENTAR", fonteSubTitulo));
+                conteudo.add(new Paragraph("\n"));
+                conteudo.add(new Paragraph("Sem Curso Complementar"));
+            }   
+            
             conteudo.add(new Paragraph("\n"));
             
-            conteudo.add(new Paragraph("IDIOMA", fonteSubTitulo));
-            conteudo.add(new Paragraph("\n"));
-            conteudo.add(new Paragraph("Ingles: Avançado.\nEscrita e Oratoria."));
+            
+            if(dadosCur.idioma.isPossuiIdiomaIdioma() == false){
+                conteudo.add(new Paragraph("IDIOMA", fonteSubTitulo));
+                conteudo.add(new Paragraph("\n"));
+                conteudo.add(new Paragraph(dadosCur.idioma.getIdiomaIdioma(), fontePadrão));
+                conteudo.add(new Paragraph(dadosCur.idioma.getNivelIdioma(), fontePadrão));
+            }else{
+                conteudo.add(new Paragraph("IDIOMA", fonteSubTitulo));
+                conteudo.add(new Paragraph("\n"));
+                conteudo.add(new Paragraph("Sem Idioma."));
+            }
             
             conteudo.add(new Paragraph("\n"));
             
