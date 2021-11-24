@@ -142,10 +142,10 @@ public class MontagemCurriculo {
             Paragraph conteudo = new Paragraph();
             
             conteudo.add(new Paragraph(dadosCur.dadosPes.getNomeUsuario(), fonteNomePessoa));
-            conteudo.add(new Paragraph(dadosCur.dadosPes.getEmailUsuario(), fontePadrão));
-            conteudo.add(new Paragraph(dadosCur.dadosPes.getEnderecoUsuario(), fontePadrão));
-            conteudo.add(new Paragraph(dadosCur.dadosPes.getTelefoneUsuario(), fontePadrão));
-            conteudo.add(new Paragraph(dadosCur.dadosPes.getDataNascimentoUsuario(), fontePadrão)); 
+            conteudo.add(new Paragraph("Email " + dadosCur.dadosPes.getEmailUsuario(), fontePadrão));
+            conteudo.add(new Paragraph("Endereço: " + dadosCur.dadosPes.getEnderecoUsuario(), fontePadrão));
+            conteudo.add(new Paragraph("Telefone: " + dadosCur.dadosPes.getTelefoneUsuario(), fontePadrão));
+            conteudo.add(new Paragraph("Data de Nascimento: " + dadosCur.dadosPes.getDataNascimentoUsuario(), fontePadrão)); 
             
             conteudo.add(new Paragraph("\n\n"));
             
@@ -157,18 +157,18 @@ public class MontagemCurriculo {
             
             conteudo.add(new Paragraph("FORMAÇÃO", fonteSubTitulo));
             conteudo.add(new Paragraph("\n"));
-            conteudo.add(new Paragraph(dadosCur.forAca.getCursoFormacaoAcademica(), fontePadrão));
-            conteudo.add(new Paragraph(dadosCur.forAca.getPeriodoFormacaoAcademica(), fontePadrão));
-            conteudo.add(new Paragraph(dadosCur.forAca.getInstituicaoFormacaoAcademica(), fontePadrão));
+            conteudo.add(new Paragraph("Curso: " + dadosCur.forAca.getCursoFormacaoAcademica(), fontePadrão));
+            conteudo.add(new Paragraph("Periodo: " + dadosCur.forAca.getPeriodoFormacaoAcademica(), fontePadrão));
+            conteudo.add(new Paragraph("Instituição: " + dadosCur.forAca.getInstituicaoFormacaoAcademica(), fontePadrão));
 
             conteudo.add(new Paragraph("\n"));
             
             if(dadosCur.expProf.isPrimeiroEmpregoExperienciaProfissional() == false){
                 conteudo.add(new Paragraph("EXPERIENCIA PROFISSIONAL", fonteSubTitulo));
                 conteudo.add(new Paragraph("\n"));
-                conteudo.add(new Paragraph(dadosCur.expProf.getFuncaoEmpresaExperienciaProfissional(), fontePadrão));
-                conteudo.add(new Paragraph(dadosCur.expProf.getPeriodoExperienciaProfissional(), fontePadrão));
-                conteudo.add(new Paragraph(dadosCur.expProf.getEmpresaExperienciaProfissional(), fontePadrão));
+                conteudo.add(new Paragraph("Função: " + dadosCur.expProf.getFuncaoEmpresaExperienciaProfissional(), fontePadrão));
+                conteudo.add(new Paragraph("Periodo: " + dadosCur.expProf.getPeriodoExperienciaProfissional(), fontePadrão));
+                conteudo.add(new Paragraph("Empresa: " + dadosCur.expProf.getEmpresaExperienciaProfissional(), fontePadrão));
             }else{
                 conteudo.add(new Paragraph("EXPERIENCIA PROFISSIONAL", fonteSubTitulo));
                 conteudo.add(new Paragraph("\n"));
@@ -177,16 +177,12 @@ public class MontagemCurriculo {
             
             conteudo.add(new Paragraph("\n"));
             
-            conteudo.add(new Paragraph("CURSO COMPLEMENTAR", fonteSubTitulo));
-            conteudo.add(new Paragraph("\n"));
-            conteudo.add(new Paragraph("Curso: Técnico em Informatica.\nDuração: 2017 - 2018 (1 ano e meio).\nPronatec Uberlandia."));
-            
             if(dadosCur.cursoComp.isFezCursoCursoComplementar() == false){
                 conteudo.add(new Paragraph("CURSO COMPLEMENTAR", fonteSubTitulo));
                 conteudo.add(new Paragraph("\n"));
-                conteudo.add(new Paragraph(dadosCur.cursoComp.getCursoCursoComplementar(), fontePadrão));
-                conteudo.add(new Paragraph(dadosCur.cursoComp.getDuracaoCursoComplementar(), fontePadrão));
-                conteudo.add(new Paragraph(dadosCur.cursoComp.getInstituicaoCursoComplementar(), fontePadrão));
+                conteudo.add(new Paragraph("Curso: " + dadosCur.cursoComp.getCursoCursoComplementar(), fontePadrão));
+                conteudo.add(new Paragraph("Duração: " + dadosCur.cursoComp.getDuracaoCursoComplementar(), fontePadrão));
+                conteudo.add(new Paragraph("Instituição: " + dadosCur.cursoComp.getInstituicaoCursoComplementar(), fontePadrão));
             }else{
                 conteudo.add(new Paragraph("CURSO COMPLEMENTAR", fonteSubTitulo));
                 conteudo.add(new Paragraph("\n"));
@@ -196,11 +192,11 @@ public class MontagemCurriculo {
             conteudo.add(new Paragraph("\n"));
             
             
-            if(dadosCur.idioma.isPossuiIdiomaIdioma() == false){
+            if(dadosCur.idioma.isPossuiIdiomaIdioma() == true){
                 conteudo.add(new Paragraph("IDIOMA", fonteSubTitulo));
                 conteudo.add(new Paragraph("\n"));
-                conteudo.add(new Paragraph(dadosCur.idioma.getIdiomaIdioma(), fontePadrão));
-                conteudo.add(new Paragraph(dadosCur.idioma.getNivelIdioma(), fontePadrão));
+                conteudo.add(new Paragraph("Idioma: " + dadosCur.idioma.getIdiomaIdioma(), fontePadrão));
+                conteudo.add(new Paragraph("Nivel do Idioma: " + dadosCur.idioma.getNivelIdioma(), fontePadrão));
             }else{
                 conteudo.add(new Paragraph("IDIOMA", fonteSubTitulo));
                 conteudo.add(new Paragraph("\n"));
@@ -211,7 +207,7 @@ public class MontagemCurriculo {
             
             conteudo.add(new Paragraph("INFORMAÇÔES COMPLEMENTARES", fonteSubTitulo));
             conteudo.add(new Paragraph("\n"));
-            conteudo.add(new Paragraph("Eu não estou procurando emprego, isso tudo é somente para um trabalho."));
+            conteudo.add(new Paragraph(dadosCur.getInfoAdicional(), fontePadrão));
             
             documento.add(conteudo);
             documento.close();
